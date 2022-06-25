@@ -56,4 +56,40 @@ router.post('/agregar', async (req, res, next) => {
   }
 });
 
+
+//modificar y traigo la novedad que seleccione
+router.get('/modificar/:id', async (req, res, next) => {
+  var id = req.params.id;
+  var novedad = await novedadesModel.getNovedadById(id);
+
+  res.render('admin/modificar', {
+    layout: 'admin/layout',
+    novedad
+  });
+}); //cierro get modi
+
+router.post('/modificar', async (req,res,next) => {
+  try {
+      // console.log(req.body.id); // para ver si trae id
+      // console.log(req.body);
+    var obj = {
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req. body.cuerpo
+    }
+
+    // console.log(obj) // para ver si trae los datos
+    await novedadesModel.modificarNovedadesById(obj, req.body.id);
+    res.redirect('/admin/novedades');
+  } catch (error) {
+    console.log(error)
+    res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'no se modifico la novedad'
+    })
+  } // cierro catch
+}) // cierro el post
+
+
 module.exports = router;
