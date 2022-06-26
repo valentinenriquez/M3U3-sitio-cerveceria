@@ -25,10 +25,10 @@ router.get('/eliminar/:id', async (req, res, next) =>{
  
 //  formulario para agregar novedades
 
-router.get('/agregar', (req,res, next) => {
-  res.render('admin/agregar', { // agregar hbs
-    layout: 'admin/layout'
-  }) //cierra render 
+router.get('/agregar', (req, res, next) => {
+    res.render('admin/agregar', { // agregar hbs
+        layout: 'admin/layout'
+    }) //cierra render 
 }); //cierra get
 
 /*agregar cuando yo toco el boton de gaurdar*/
@@ -79,7 +79,7 @@ router.post('/modificar', async (req,res,next) => {
     }
 
     // console.log(obj) // para ver si trae los datos
-    await novedadesModel.modificarNovedadesById(obj, req.body.id);
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
     res.redirect('/admin/novedades');
   } catch (error) {
     console.log(error)

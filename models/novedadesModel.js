@@ -28,7 +28,7 @@ async function insertNovedad(obj) {
 } //cierra insert
 
 //traigo los datos para modificar una sola novedad
-async function getNvedadById(id) {
+async function getNovedadById(id) {
     var query = "select * from novedades where id=? ";
     var rows = await pool.query(query, [id]);
     return rows[0];
@@ -47,4 +47,4 @@ async function modificarNovedadById(obj, id) {
 
 
 
-module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNvedadById, modificarNovedadById }
+module.exports = { getNovedades, deleteNovedadesById, insertNovedad, getNovedadById, modificarNovedadById }
