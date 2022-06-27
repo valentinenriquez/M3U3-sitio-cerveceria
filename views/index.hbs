@@ -47,7 +47,7 @@
             <ul class="lista-novedades">
                 {{#each novedades}}
                 <li><a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img
-                            src="images/novedades01.jpg">{{titulo}}</a></li>
+                            src="{{imagen}}">{{titulo}}</a></li>
                 {{/each}}
             </ul>
 
@@ -108,8 +108,9 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                        <h5>{{subtitulo}}</h5>
-                        <p>{{cuerpo}}</p>
+                            <h5>{{subtitulo}}</h5>
+                            <img src="{{imagen}}" alt="{{subtitulo}}">
+                            <p>{{cuerpo}}</p>
                     </div>
                 </div>
             </div>
@@ -155,7 +156,7 @@
                 <div class="card">
                     <img src="images/nosotros02.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card title">Benjamin Enriquez</h5>
+                        <h5 class="card title">Juan Perez</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque totam
                             doloremque libero commodi fugit veniam atque, ducimus iste, voluptates labore, saepe maxime
                             accusamus ea ipsum rem nulla vero iure tenetur!</p>
@@ -166,7 +167,7 @@
                 <div class="card">
                     <img src="images/nosotros03.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card title">Luis Enriquez</h5>
+                        <h5 class="card title">Agustin Peralta</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex porro aut
                             exercitationem rerum, fugiat nam excepturi soluta inventore in voluptatibus aliquid nemo
                             eligendi sequi obcaecati explicabo aliquam doloribus. Corporis, adipisci?.</p>
@@ -177,9 +178,9 @@
                 <div class="card">
                     <img src="images/nosotros04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card title" Laura Perez</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+                        <h5 class="card title">Javier Sanchez</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
                     </div>
                 </div>
                 <!-- fin card-deck -->
@@ -195,7 +196,7 @@
             <h2>Visitanos</h2>
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.272205745638!2d-58.45927868449373!3d-34.597277680461104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5f8d7592709%3A0xee09060d423d48e6!2sConcepci%C3%B3n%20Arenal%205018%2C%20C1427ELD%20CABA!5e0!3m2!1ses!2sar!4v1656105636179!5m2!1ses!2sar"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3145.1034611794885!2d-57.55162558409164!3d-37.97471475104441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dbe11ab36331%3A0xeed3e647884d5df3!2sPatagones%20380%2C%20B7600BXG%20Mar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1655403287932!5m2!1ses-419!2sar"
                     style="border:0;"></iframe>
             </div>
         </div>
